@@ -15,3 +15,9 @@ PS1="[$YELLOW\d \t $LIGHT_GRAY\u@\h:$LIGHT_GREEN\w$LIGHT_GRAY]\n$LIGHT_PURPLE\$(
 export CLICOLOR=true
 
 EDITOR=vim
+
+# History configuration
+HISTCONTROL=ignoredups:ignorespace
+shopt -s histappend
+HISTSIZE=1000
+HISTFILESIZE=2000

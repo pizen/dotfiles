@@ -49,7 +49,7 @@ map [6~ 
 "Set up graphical options"
 "set guifont=-b&h-lucidatypewriter-medium-r-normal-*-*-100-*-*-m-*-iso8859-1
 if has("gui_macvim")
-  set guifont=Menlo:h12
+  set guifont=Menlo\ Bold:h12
 else
   set guifont=bitstream\ vera\ sans\ mono\ 10
 endif
