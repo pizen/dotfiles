@@ -14,7 +14,7 @@ set softtabstop=2
 " Basic options
 set autoindent
 set ruler
-set number
+set relativenumber
 set nohls
 set scrolloff=3
 set showmode
