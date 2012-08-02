@@ -6,10 +6,10 @@ set nocompatible
 set modelines=0
 
 " Tabs
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-"set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
 
 " Basic options
 set autoindent
@@ -28,7 +28,10 @@ set backspace=indent,eol,start
 "set backspace=2
 "set encoding=utf-8
 "set visualbell
-		
+
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
+
 " Color scheme
 syntax on
 set background=dark
