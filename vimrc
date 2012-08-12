@@ -1,5 +1,9 @@
 " Ian's .vimrc file.  If you're not using VIM, you should be. "
 
+" Pathogen stuff
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
 set nocompatible
 
 " Security
