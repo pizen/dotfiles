@@ -21,3 +21,13 @@ HISTCONTROL=ignoredups:ignorespace
 shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
+
+UNAME=`uname`
+if [ "$UNAME" == "Linux" ]; then
+    alias ls='ls --color=auto'
+fi
+     
+if [ "$UNAME" == "Darwin" ]; then
+    export TERM=xterm-color
+    alias ls='ls -G'
+fi
