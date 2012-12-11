@@ -10,7 +10,14 @@ WHITE="\[\033[1;37m\]"
 LIGHT_GRAY="\[\033[0;37m\]"
 LIGHT_PURPLE="\[\033[1;34m\]"
 
-PS1="[$YELLOW\d \t $LIGHT_GRAY\u@\h:$LIGHT_GREEN\w$LIGHT_GRAY]\n$LIGHT_PURPLE\$(parse_git_branch)$LIGHT_GRAY> "
+if [ -n "$SSH_CLIENT" ]; then
+    HN_COLOR=$LIGHT_RED
+else
+    HN_COLOR=$LIGHT_GRAY
+fi
+
+
+PS1="[$YELLOW\d \t $WHITE\u$LIGHT_GRAY@$HN_COLOR\h$LIGHT_GRAY:$LIGHT_GREEN\w$LIGHT_GRAY]\n$LIGHT_PURPLE\$(parse_git_branch)$LIGHT_GRAY> "
 
 export CLICOLOR=true
 
