@@ -22,6 +22,7 @@ PS1="[$YELLOW\d \t $WHITE\u$LIGHT_GRAY@$HN_COLOR\h$LIGHT_GRAY:$LIGHT_GREEN\w$LIG
 export CLICOLOR=true
 
 EDITOR=vim
+GIT_EDITOR=$EDITOR
 
 # History configuration
 HISTCONTROL=ignoredups:ignorespace
