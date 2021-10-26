@@ -2,6 +2,12 @@ function parse_git_branch {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
+function aws_profile {
+  if [ ! -z $AWS_PROFILE ]; then
+    echo -n "{$AWS_PROFILE} "
+  fi
+}
+
 # Case-insensitive globbing
 setopt NO_CASE_GLOB
 
@@ -53,7 +59,7 @@ setopt PROMPT_SUBST
 # [<last command ret code> <datetime> <user>@<hostname>:<pwd>]
 # (git branch)>
 PS1='[%(?.%F{green}^-^.%F{red}O_O) %F{yellow}%D{%a %b %d %H:%M:%S} %f%n@%m:%F{green}%~%f]
-%F{magenta}$(parse_git_branch)%f> '
+%F{cyan}$(aws_profile)%F{magenta}$(parse_git_branch)%f$ '
 
 ###
 # Make deep directory traversal easier
